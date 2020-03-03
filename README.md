@@ -1,8 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+Получение JSON объекта, с введенными данными от пользователя при нажатии кнопки "Войти"
 
 In the project directory, you can run:
+
+### `npm install`
+
+### `npm react`
 
 ### `yarn start`
 
