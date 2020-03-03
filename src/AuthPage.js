@@ -10,7 +10,7 @@ class AuthPage extends Component {
 
   onUserNameChange = event => {
     this.setState({
-      loginUser: { userName: event.target.value }
+      loginUser: { ...this.state.loginUser, userName: event.target.value }
     });
   };
 
@@ -38,12 +38,15 @@ class AuthPage extends Component {
   };
 
   render = () => {
+    console.log(this.state.loginUser.userName, this.state.loginUser.password);
     return (
       <form className="authForm" onSubmit={this.handleSubmit}>
         <label>
           Имя пользователя:
           <input
+            name="userName"
             type="text"
+            value={this.state.loginUser.userName}
             onChange={this.onUserNameChange}
             placeholder="Введите имя"
           />
@@ -51,7 +54,9 @@ class AuthPage extends Component {
         <label>
           Пароль:
           <input
-            type="text"
+            name="password"
+            type="password"
+            value={this.state.loginUser.password}
             onChange={this.onPasswordChange}
             placeholder="Введите пароль"
           />
